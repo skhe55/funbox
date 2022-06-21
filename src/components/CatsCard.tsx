@@ -38,8 +38,8 @@ const CatsCard: React.FC<ICatsCard> = ({smallHeader, bigHeader, tasteHeader, qua
                 </div>
                 <img src={catImg} className="cat-img"></img>
                 <div style={{background: color}} className="oval-weight-of-packing">
-                    <div style={{opacity: '1'}} className="oval-weight-of-packing__text">{kg}</div>
-                    <div style={{opacity: '1'}} className="oval-weight-of-packing__text--magnitude">кг</div>
+                    <div className="oval-weight-of-packing__text">{kg}</div>
+                    <div className="oval-weight-of-packing__text--magnitude">кг</div>
                 </div>
             </div>
             {
