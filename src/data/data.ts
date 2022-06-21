@@ -8,7 +8,6 @@ export const defaultData = [
         kg:"0,5",
         underlineDesc: ["Чего сидишь? Порадуй котэ", "Печень утки разварная с артишоками"],
         underlineBuy:"купи.",
-        color: "#1698D9"
     },
     {
         smallHeader:"Сказачное заморское явство",
@@ -19,7 +18,6 @@ export const defaultData = [
         kg:"2",
         underlineDesc: ["Чего сидишь? Порадуй котэ", "Головы щучьи с чесноком да свежайшая сёмгушка"],
         underlineBuy:"купи.",
-        color: "#1698D9"
     }, 
     {
         smallHeader:"Сказачное заморское явство",
@@ -30,7 +28,6 @@ export const defaultData = [
         kg:"5",
         underlineDesc: ["Чего сидишь? Порадуй котэ", "Филе из цыплят с трюфелями в бульоне"],
         underlineBuy:"купи.",
-        color: "#1698D9"
     }
 ]
 
