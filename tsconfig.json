@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "lib": ["dom", "DOM.Iterable", "ESNext"],
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "target": "ESNext",
+        "sourceMap": true
+    },
+    "include": ["src"]
+}

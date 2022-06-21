@@ -1,0 +1,176 @@
+$default-color: #1698D9;
+$before-color: #1698D9;
+$opacity: 1;
+
+.card-wrapper__content {
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    background: #FFFFFF;
+    background: linear-gradient(-45deg, #FFFFFF 0%, #FFFFFF 93.7%, var(--default-color) 94%, var(--default-color) 94.5%, transparent 94.5%, transparent 100%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-right: 4px solid var(--default-color);
+    border-bottom: 4px solid var(--default-color);
+    width: 320px;
+    height: 509px;
+    border-radius: 12px;
+    overflow: hidden;
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 21px 61px 0 48px;
+        .card-content__smallHeader {
+            opacity: var(--opacity);
+            margin: 0 3px 0 3px;
+            @extend %font-family-and-style;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 19px;
+            color: #666666;
+        }
+        .card-content__bigHeader {
+            opacity: var(--opacity);
+            margin: 5px 0 3px 0;
+            @extend %font-family-and-style;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            color: #000000;
+        }
+        .card-content__tasteHeader {
+            opacity: var(--opacity);
+            margin: 0 0 15px 0;
+            @extend %font-family-and-style;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+        }
+        .card-content__quantityPortion {
+            opacity: var(--opacity);
+            @extend %font-family-and-style;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #666666;
+        }
+        .card-content__quantityPortion--wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    img[class="cat-img"] {
+        opacity: var(--opacity);
+        position: relative;
+        left: -7.5%;
+        right: -7.5%;
+        bottom: -11.59%;
+        width: 368px;
+        height: 360px;
+    }
+    .oval-weight-of-packing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        top: -25.5%;
+        left: 70%;
+        right: 5%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        .oval-weight-of-packing__text {
+            opacity: var(--opacity);
+            position: relative;
+            @extend %font-family-and-style;
+            font-weight: 100;
+            font-size: 42px;
+            line-height: 22px;
+            text-align: center;
+            margin-top: 10px;
+            color: #FFFFFF;
+        }
+        .oval-weight-of-packing__text--magnitude {
+            opacity: var(--opacity);
+            position: relative;
+            @extend %font-family-and-style;
+            font-weight: 100;
+            font-size: 21px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 45px;
+        width: 280px;
+        border: 2px solid var(--before-color);
+        border-radius: 12px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 480px;
+        border: 2px solid var(--before-color);
+    }
+}
+.underline-description {
+    @extend %font-family-and-style;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    .underline-description--buy {
+        color: var(--default-color);
+        cursor: pointer;
+        border-bottom: 1px dashed var(--default-color);
+    }
+}
+
+// extend class styles
+
+%font-family-and-style {
+    font-family: 'Trebuchet MS';
+    font-style: normal;
+}
+
+// resolutions for tablets, phones
+
+@media (min-width: 768px) and (max-width: 1468px) {
+    .card-wrapper:first-child {
+        margin: 0 20rem 0 20rem;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .card-wrapper__content {
+        width: 280px;
+        height: 479px;
+        .oval-weight-of-packing {
+            width: 70px;
+            height: 70px;
+            top: -35.5%;
+            left: 70%;
+            .oval-weight-of-packing__text {
+                font-size: 38px;
+                line-height: 20px;
+            }
+            .oval-weight-of-packing__text--magnitude {
+                font-size: 19px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
