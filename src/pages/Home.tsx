@@ -24,32 +24,30 @@ const Home: React.FC = () => {
     }
 
     return (
-        <MainLayout>
-            <div className="content-wrapper">
-                <div className="header">
-                    Ты сегодня покормил кота?
-                </div>
-                <div className="cats-cards-wrapper">
-                    {defaultData.map((item, i) => {
-                        return (
-                            <CatsCard 
-                            key={i}
-                            smallHeader={item.smallHeader}
-                            bigHeader={item.bigHeader}
-                            tasteHeader={item.tasteHeader}
-                            quantityPortion={item.quantityPortion}
-                            quantityGifts={item.quantityGifts}
-                            kg={item.kg}
-                            underlineDesc={activeIndex.indexOf(i) !== -1 ? item.underlineDesc[1] : item.underlineDesc[0]}
-                            underlineBuy={activeIndex.indexOf(i) !== -1 ? '' : item.underlineBuy}
-                            color={handleSelectedColor(i)}
-                            onClick={() => onClickItem(i)}
-                            />
-                        );
-                    })}
-                </div>
+        <div className="content-wrapper">
+            <div className="header">
+                Ты сегодня покормил кота?
             </div>
-        </MainLayout>
+            <div className="cats-cards-wrapper">
+                {defaultData.map((item, i) => {
+                    return (
+                        <CatsCard 
+                        key={i}
+                        smallHeader={item.smallHeader}
+                        bigHeader={item.bigHeader}
+                        tasteHeader={item.tasteHeader}
+                        quantityPortion={item.quantityPortion}
+                        quantityGifts={item.quantityGifts}
+                        kg={item.kg}
+                        underlineDesc={activeIndex.indexOf(i) !== -1 ? item.underlineDesc[1] : item.underlineDesc[0]}
+                        underlineBuy={activeIndex.indexOf(i) !== -1 ? '' : item.underlineBuy}
+                        color={handleSelectedColor(i)}
+                        onClick={() => onClickItem(i)}
+                        />
+                    );
+                })}
+            </div>
+        </div>
     );
 }
 
